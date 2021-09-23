@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "808748250877",
+    "project_id": "shoesmart-5d1e7",
+    "storage_bucket": "shoesmart-5d1e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808748250877:android:2f75896859e7c570ca7094",
+        "android_client_info": {
+          "package_name": "com.reynaldi.shoesmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808748250877-386tkdh8ddtjudejbo7rtmkhqc455si6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbeu-LHRX0YGROxPZ_N7IEvnUIU9zM5h4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808748250877-386tkdh8ddtjudejbo7rtmkhqc455si6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
