@@ -175,7 +175,6 @@ class _HomePageState extends State<HomePage> {
             FutureBuilder<QuerySnapshot>(
                 future: ProductsService().getProduct(),
                 builder: (_, snapshot) {
-                  print(snapshot);
                   if (snapshot.hasData) {
                     return Column(
                       children: snapshot.data.docs
