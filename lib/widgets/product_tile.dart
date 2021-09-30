@@ -23,7 +23,9 @@ class ProductTile extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProductPage(name),
+            builder: (context) => ProductPage(
+              name: name,
+            ),
           ),
         );
       },
@@ -52,7 +54,7 @@ class ProductTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Running',
+                    name,
                     style: TextStyle(
                       fontSize: 12,
                     ),
@@ -61,7 +63,7 @@ class ProductTile extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    name,
+                    merk,
                     style: TextStyle(
                       fontSize: 16,
                     ),
@@ -71,7 +73,7 @@ class ProductTile extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    '\$$price',
+                    '\$${price}',
                     style: TextStyle(
                       fontSize: 14,
                     ),

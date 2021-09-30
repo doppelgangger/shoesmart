@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+/*import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shoesmart/pages/product_page.dart';
 import 'package:shoesmart/services/product_service.dart';
@@ -30,4 +30,4 @@ class ProductProvider extends StatelessWidget {
       ],
     );
   }
-}
+}*/

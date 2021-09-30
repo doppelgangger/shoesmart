@@ -1,36 +1,36 @@
-import 'package:flutter/cupertino.dart';
+import 'gallery_model.dart';
 
 class ProductModel {
-  String id;
-  String image;
-  String category;
   String name;
-  String price;
+  String merk;
+  String category;
+  int price;
+  //List<Galery> galleries;
 
-  ProductModel({
-    @required this.id,
-    @required this.image,
-    @required this.category,
-    @required this.name,
-    @required this.price,
-  });
+  ProductModel(
+    this.name,
+    this.merk,
+    this.category,
+    this.price,
+    //this.galleries,
+  );
 
-  ProductModel.fromJson(Map json)
-      : this(
-          id: json['id'],
-          image: json['image'],
-          category: json['category'],
-          name: json['name'],
-          price: json['price'],
-        );
+  ProductModel.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    merk = json['merk'];
+    category = json['category'];
+    price = json['price'];
+    //galleries =
+    //json['galleries'].map((gallery) => Galery.fromJson(gallery)).toList();
+  }
 
-  Map toJson() {
+  Map<String, dynamic> toJson() {
     return {
-      'id': this.id,
-      'image': this.image,
-      'category': this.category,
-      'name': this.name,
-      'price': this.price,
+      'name': name,
+      'merk': merk,
+      'category': category,
+      'price': price,
+      //'galleries': galleries.map((gallery) => gallery.toJson()).toList(),
     };
   }
 }

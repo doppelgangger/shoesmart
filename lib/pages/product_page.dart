@@ -2,19 +2,37 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:shoesmart/theme.dart';
 
+class Galery {
+  String image;
+
+  Galery({
+    this.image,
+  });
+
+  Galery.fromJson(Map<String, dynamic> json) {
+    image = json['image'];
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'image': image,
+    };
+  }
+}
+
 class ProductPage extends StatefulWidget {
-  final String name;
-  final String merk;
-  final String category;
-  final int price;
-  final String image;
+  String name;
+  String merk;
+  String category;
+  int price;
+  List<Galery> galleries; //= List<Galery>();
 
   ProductPage({
     this.name,
     this.merk,
     this.category,
     this.price,
-    this.image,
+    this.galleries,
   });
 
   @override
@@ -137,13 +155,15 @@ class _ProductPageState extends State<ProductPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.name,
+                          widget.name != null ? widget.name : 'default value',
                           style: TextStyle(
                             fontSize: 24,
                           ),
                         ),
                         Text(
-                          widget.category,
+                          widget.category != null
+                              ? widget.category
+                              : 'default value',
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -213,7 +233,7 @@ class _ProductPageState extends State<ProductPage> {
                     ),
                   ),
                   Text(
-                    '\$${widget.price}',
+                    '\$${widget.price != null ? widget.price : 'default value'}',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,

@@ -12,12 +12,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    /*ProductsService().getProduct().then((QuerySnapshot querySnapshot) {
-      querySnapshot.docs.forEach((doc) {
-        print(doc);
-      });
-    });*/
-
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
@@ -181,6 +175,7 @@ class _HomePageState extends State<HomePage> {
             FutureBuilder<QuerySnapshot>(
                 future: ProductsService().getProduct(),
                 builder: (_, snapshot) {
+                  print(snapshot);
                   if (snapshot.hasData) {
                     return Column(
                       children: snapshot.data.docs
